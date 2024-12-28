@@ -11,7 +11,8 @@ cmake-build-debug
 /Makefile.in
 /Makefile
 /aclocal.m4
-/config.log
+*.log
+*.trs
 /config.status
 /configure
 /stamp-h1
@@ -25,3 +26,4 @@ cmake-build-debug
 
 # Ignore the executable
 trigonometry
+test_funcA
