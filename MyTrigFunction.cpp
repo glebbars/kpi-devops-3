@@ -1,5 +1,6 @@
 #include "MyTrigFunction.h"
 #include <iostream>
+#include <cmath> // For pow and tgamma
 
 MyTrigFunction::MyTrigFunction() {}
 
