@@ -1,0 +1,14 @@
+Source: trigonometry
+Section: utils
+Priority: optional
+Maintainer: barskyi.glib@lil.kpi.ua
+Build-Depends: debhelper (>= 9), g++
+Standards-Version: 4.5.0
+Homepage: https://example.com
+
+Package: trigonometry
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libstdc++6
+Description: Trigonometry application
+ A simple trigonometry application built with Automake.
+

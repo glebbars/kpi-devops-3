@@ -16,3 +16,6 @@ TESTS = test_funcA
 # Data files to include in the distribution
 # "nobase" preserves directory structure in the distribution
 nobase_dist_pkgdata_DATA = data/data.txt
+
+# Install additional metadata for Debian packaging
+dist_pkgdata_DATA = README.md

@@ -1,0 +1,43 @@
+name: Build Debian Package
+
+on:
+  push:
+    branches:
+      - branchAutoPackage
+
+jobs:
+  build-debian-package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Debian build tools
+        run: sudo apt-get install -y debhelper build-essential dpkg-dev
+
+      - name: Generate build scripts
+        run: |
+          aclocal
+          autoconf
+          automake --add-missing
+
+      - name: Configure the project
+        run: ./configure
+
+      - name: Build the project
+        run: make
+
+      - name: Build Debian package
+        run: dpkg-buildpackage -us -uc
+
+      - name: Move .deb files to artifacts directory
+        run: |
+          mkdir -p artifacts
+          mv ../*.deb artifacts/
+
+      - name: Upload Debian package (artifact)
+        uses: actions/upload-artifact@v3
+        with:
+          name: trigonometry-deb
+          path: artifacts/*.deb
