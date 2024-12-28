@@ -1,0 +1,29 @@
+name: Automake Build
+
+on:
+  push:
+    branches:
+      - branchAutomake
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Generate build scripts
+        run: |
+          aclocal
+          autoconf
+          automake --add-missing
+
+      - name: Configure the project
+        run: ./configure
+
+      - name: Build the project
+        run: make
+
+      - name: Run distcheck
+        run: make distcheck
