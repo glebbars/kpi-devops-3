@@ -1,2 +1,26 @@
+# IDE
 .idea
+
+# Ignore generated directories
 cmake-build-debug
+/build-aux/
+/autom4te.cache/
+.deps
+
+# Ignore generated files
+/Makefile.in
+/aclocal.m4
+/config.log
+/config.status
+/configure
+/stamp-h1
+
+# Ignore compiled object files and libraries
+*.o
+*.lo
+*.la
+*.a
+*.so
+
+# Ignore the executable
+trigonometry
