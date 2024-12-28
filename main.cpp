@@ -4,7 +4,7 @@
 int main() {
     MyTrigFunction trigFunc;
 
-    std::cout << "Result: " << trigFunc.FuncA() << std::endl;
+    std::cout << "Result: " << trigFunc.FuncA(5) << std::endl;
 
     return 0;
 }

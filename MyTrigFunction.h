@@ -4,7 +4,7 @@
 class MyTrigFunction {
 public:
     MyTrigFunction();
-    double FuncA();
+    double FuncA(int n);
 };
 
 #endif
