@@ -3,4 +3,4 @@ project(kpi_devops_3)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(kpi_devops_3 main.cpp MyTrigFunction.cpp)
+add_executable(kpi_devops_3 main.cpp MyTrigFunction.cpp httpServer.cpp)

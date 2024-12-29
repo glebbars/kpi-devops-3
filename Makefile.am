@@ -3,12 +3,12 @@ AUTOMAKE_OPTIONS = foreign
 
 # Main program configuration
 bin_PROGRAMS = trigonometry
-trigonometry_SOURCES = main.cpp MyTrigFunction.cpp MyTrigFunction.h
+trigonometry_SOURCES = main.cpp MyTrigFunction.cpp MyTrigFunction.h httpServer.cpp httpServer.h
 
 # Test programs configuration
 # "check_PROGRAMS" lists the test binaries to build for `make check`
 check_PROGRAMS = test_funcA
-test_funcA_SOURCES = tests/test_funcA.cpp MyTrigFunction.cpp MyTrigFunction.h
+test_funcA_SOURCES = tests/test_funcA.cpp MyTrigFunction.cpp MyTrigFunction.h httpServer.cpp httpServer.h
 
 # Declare additional test programs in TESTS for `make check`
 TESTS = test_funcA
